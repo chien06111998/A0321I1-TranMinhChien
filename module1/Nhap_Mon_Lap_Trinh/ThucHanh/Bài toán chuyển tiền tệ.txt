@@ -1,0 +1,6 @@
+Begin	
+	Input nhapDolla 
+	vnđ=nhapDolla * 23000
+	display vnđ
+end
+

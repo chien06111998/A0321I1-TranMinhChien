@@ -1,0 +1,17 @@
+Begin
+	Input diem
+	IF diem>=75 
+		Display "Xep loai A"
+	ELSE
+	IF diem>=60 
+		Display "Xep loai B"
+	ELSE 
+	IF diem>=45 
+		Display "Xep loai C"
+	ELSE 
+	IF diem>=35 	
+		Display "Xep loai D"
+	ELSE 	
+		Display "Xep loai E"
+	END IF
+END

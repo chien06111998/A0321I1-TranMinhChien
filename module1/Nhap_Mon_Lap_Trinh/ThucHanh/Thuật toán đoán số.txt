@@ -1,0 +1,6 @@
+Begin
+	n là số ngẩu nhiên từ 0-9
+	Nhập m
+	if(n==m) Display "Bạn đoán đúng"
+	else Display "Bạn đoán sai"
+end
