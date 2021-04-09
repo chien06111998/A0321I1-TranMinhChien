@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khai báo vá sử dụng biến</biến></title>
+</head>
+<body>
+    <h3>Bài 3: Tìm bội</h3>
+    <button type="button" onclick="timboi()">Tìm bội</button>
+    <br>
+</body>
+</html>
+<script>
+    var i=10;
+    let f=20.5;
+    let b=true;
+    let s='Hà Nội'
+    document.write("<strong>Bai tap 1: </strong><br>");
+    document.write("i= "+i);
+    document.write("<br/>");
+    document.write("f= "+f);
+    document.write("<br/>");
+    document.write("b= "+b);
+    document.write("<br>");
+    document.write("s= "+s);
+    document.write("<br> <strong>Bai tap 2: </strong><br>");
+    var width = 20;
+    var height = 10;
+    var area = width * height;
+    document.write("Diện tích HCN= "+area);
+    // document.write("<br> <strong>Bai tap 3: </strong><br>");
+    function timboi() {
+        var a = parseInt(prompt("nhập a"));
+        var b = parseInt(prompt("nhập b"));
+        if (a%b==0) {
+            alert("a là bội số của b.")
+        }
+        else
+            alert("a không phải bội số của b.")
+    }
+</script>
