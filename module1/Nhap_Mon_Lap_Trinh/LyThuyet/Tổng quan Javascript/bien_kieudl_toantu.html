@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến, Kiểu DL, Tóa Tử</title>
+</head>
+<body>
+    <h2> Bài 1: Tính ĐTB</h2>
+    <p>Điểm Lý: </p>
+    <input type="text" name="nhapdiem" id="diemLy"/>
+    <p>Điểm Hóa: </p>
+    <input type="text" name="nhapdiem" id="diemHoa"/>
+    <p>Điểm Sinh: </p>
+    <input type="text" name="nhapdiem" id="diemSinh"/>
+    <br>
+    <br>
+    <button type="button" onclick="diemTB()">Điểm trung bình</button>
+    <p>Điểm trung bình: </p>
+    <input type="text" id="diemTB">
+    <br>
+    <br>
+<!-- Bài 2-->
+    <h2>Bài 2: Chuyển nhiệt độ</h2>
+    <p>Nhập độ C= </p>
+    <input type="text" name="nhapdo" id="doC"/>
+    <button type="button" onclick="chuyendo_F()">Chuyển độ F</button>
+    <p>Độ F= </p>
+    <input type="text" id="doF"/>
+    <br>
+    <br>
+<!--Bài 3-->
+    <h2>Bài 3, 4: Tính diện tích, chu vi hình tròng</h2>
+    <p>Nhập bán kính: </p>
+    <input type="text" id="bankinh"><br>
+    <button type="button" onclick="s_HinhTron()">Tính diện tích - chu vi</button>
+    <p>Diện tích hình tròn là: </p>
+    <input type="text" id="dientich"/>
+    <p>Chu vi hình tròn là: </p>
+    <input type="text" id="chuvi"/>
+</body>
+</html>
+<script>
+    function diemTB() {
+        //nhap diem
+        var diemly = parseInt(document.getElementById("diemLy").value);
+        var diemhoa = parseInt(document.getElementById("diemHoa").value);
+        var diemsinh = parseInt(document.getElementById("diemSinh").value);
+        let avg = (diemly+diemhoa+diemsinh)/3;
+        //gán input diem trung binh = avg
+        document.getElementById("diemTB").value=avg;
+    }
+    function chuyendo_F() {
+        var doc = parseInt(document.getElementById("doC").value);
+        let doF = doc/5*9+32;
+        document.getElementById("doF").value = doF;
+    }
+    function s_HinhTron() {
+        var r= parseInt(document.getElementById("bankinh").value);
+        var pi = 3.14
+        let s= pi*r*r;
+        let c= 2*pi*r;
+        document.getElementById("dientich").value=s;
+        document.getElementById("chuvi").value=c;
+    }
+</script>
