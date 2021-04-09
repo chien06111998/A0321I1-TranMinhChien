@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị đầu ra</title>
+</head>
+<body>
+    <h2>BT 1 : dùng hàm alert</h2>
+    <button type="button" onclick="show_message();">Click me</button>
+    <br>
+    <h2>BT 2 : dùng thẻ html</h2>
+    <div id="messageDiv"></div>
+    <button type="button" onclick="show_Message();">Click me!</button>
+    <br>
+    <h2>BT 3 : dùng document.write</h2>
+    <button type="button" onclick="show();">Click on baby?</button>
+    <br>
+    <h2>BT 4 : Dùng console.log()</h2>
+    <button type="button" onclick="show_mes();">Click here</button>
+</body>
+</html>
+<script>
+    function show_message() {
+        alert("hello")
+    }
+    function show_Message() {
+        document.getElementById("messageDiv").innerHTML = "Xin chào";
+    }
+    function show() {
+        document.write("Hé lô bấy bì");
+    }
+    function show_mes() {
+        console.log("Click vào làm giề")
+    }
+</script>
