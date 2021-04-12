@@ -6,19 +6,20 @@
 </head>
 <body>
     <h2>BT 1: add trong thẻ html</h2>
-    <button type="button" onclick="alert("hô la)">Click me</button>
+    <button type="button" onclick="alert("hô la")>Click me</button>
     <br>
     <h2>BT 2: sd thẻ script</h2>
-    <button type="button" id="demo" onclick="demo">Click here</button>
+    <button type="button" onclick="clickfunction();">Click here</button>
     <br>
     <h2>BT 3: tách thẻ script thành file riêng</h2>
-    <button type="button" id="demo2">Come on baby</button>
+    <button type="button" onclick="click_function();">Come on baby</button>
+    <script src="demo.js"></script>
 </body>
 </html>
 <script>
     var demo = document.getElementById("demo");
     demo = document.addEventListener("click",clickfunction);
-    function clickfunction() {
-        alert("hé hồ")
-    }
+     function clickfunction() {
+         alert("hé hồ")
+     }
 </script>
