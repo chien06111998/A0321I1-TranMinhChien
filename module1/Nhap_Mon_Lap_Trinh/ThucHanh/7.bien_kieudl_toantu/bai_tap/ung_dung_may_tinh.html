@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <title>Ứng dụng máy tính</title>
     <style>
+        #bt {
+            padding: 8px;
+        }
         #ketqua {
             color: red;
         }
     </style>
 </head>
 <body>
+    <h1>Cách 1</h1>
     <form>
         <h>Caculator</h>
         <div>
@@ -24,6 +28,26 @@
             <script src="ud_may_tinh.js"></script>
         </div>
         <div id="ketqua"></div>
+    </form>
+    <br>
+    <h1>Cách 2</h1>
+    <form style="width: 400px">
+        <h2>Caculator</h2>
+        <div>
+            <input type="text" id="soa"/>
+            <select id="phep_tinh" >
+                <option value="cong">+</option>
+                <option value="tru">-</option>
+                <option value="nhan">*</option>
+                <option value="chia">/</option>
+            </select>
+            <input type="text" id="sob"/>
+        </div>
+        <div align="center" id="bt">
+            <input type="button" value="Tính" onclick="ketqua()"/>
+        </div>
+        <script src="ud_may_tinh.js"></script>
+        <div id="ket_qua"></div>
     </form>
 </body>
 </html>
