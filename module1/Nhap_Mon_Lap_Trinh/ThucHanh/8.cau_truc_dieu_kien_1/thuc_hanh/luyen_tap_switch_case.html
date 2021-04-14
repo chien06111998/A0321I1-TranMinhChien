@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập switch_case</title>
+</head>
+<body>
+    <h1>Bài 1</h1>
+    <script>
+        var browser = prompt("What's browser: ", '');
+        switch (browser) {
+            case 'Edge': {
+                alert("You've got then Edge!");
+                break;
+            }
+            case 'Chrome':
+            case 'Firefow':
+            case 'Safari':
+            case 'Opera': {
+                alert("okay we support these browsers too");
+                break;
+            }
+            default:
+                alert("We hope that this page looks ok!");
+        }
+    </script>
+    <br>
+    <br>
+    <h1>Bài 2</h1>
+    <script>
+        var a = parseInt(prompt("a? ", ''));
+        switch (a) {
+            case 0:
+                alert(0);
+                break;
+            case 1:
+                alert(1);
+                break;
+            case 2:
+            case 3:
+                alert("2,3");
+                break;
+        }
+    </script>
+    <br>
+    <br>
+    <h1>Bài 3</h1>
+    <h3>- If/Else</h3>
+    <br>
+    <script>
+        let a = parseInt(prompt("a= ", ''));
+        if(a > 0)
+            alert(1);
+        else if (a<0)
+            alert(-1);
+        else
+            alert(0);
+    </script>
+    <h3>Switch-Case</h3>
+    <br>
+    <script>
+        let a= parseInt(prompt("a= ", ''));
+        switch (a >0? 1 : a<0 ? -1 :0) {
+            case 0:
+                alert(0);
+                break;
+            case 1:
+                alert(1);
+                break;
+            case -1:
+                alert(-1);
+                break
+        }
+    </script>
+</body>
+</html>

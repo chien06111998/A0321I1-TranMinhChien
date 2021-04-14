@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện Tập If_Else_If</title>
+</head>
+<body>
+    <script>
+        var userName = prompt("User Name: ", '');
+        if(userName == "Admin") {
+            var password = prompt("Passwork: ", '');
+            if(password == "TheMaster")
+                alert("Welcome")
+            else if(password == null)
+                alert("Canceled")
+            else
+                alert("Wrong password")
+        }
+        else if(userName == null)
+                alert("Canceld");
+             else
+                alert("I don't know you?");
+    </script>
+</body>
+</html>
