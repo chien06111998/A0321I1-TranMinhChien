@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chỉ số cân nặng</title>
+    <style>
+        #hien_thi {
+            padding: 8px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="chi_so_can_nang.html">
+        <div><h2>Tính chỉ số cân nặng</h2></div>
+        <div>
+            <p>Cân nặng</p>
+            <input type="text" id="can_nang">
+            <p>Chiều cao</p>
+            <input type="text" id="chieu_cao">
+        </div>
+        <div style="padding: 8px">
+            <input type="button" onclick="tinh();" value="Tinh"/>
+        </div>
+        <div id="hien_thi"></div>
+    </form>
+    <script src="chi_so_can_nang.js"></script>
+</body>
+</html>
