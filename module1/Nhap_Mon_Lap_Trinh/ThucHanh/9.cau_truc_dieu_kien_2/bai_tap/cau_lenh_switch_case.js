@@ -1,4 +1,4 @@
-function show_Day() {
+function showDay() {
     var month = parseInt(document.getElementById("month").value);
     switch (month) {
         case 1:

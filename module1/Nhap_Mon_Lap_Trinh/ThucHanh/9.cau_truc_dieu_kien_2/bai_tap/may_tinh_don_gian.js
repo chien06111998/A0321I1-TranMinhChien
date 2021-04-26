@@ -41,7 +41,7 @@
 //     document.getElementById("pheptinh").value += " / ";
 // }
 //Cách 2:
-function click_Mouse(value) {
+function clickMouse(value) {
     let gtri = document.getElementById("pheptinh").value;
     let kq="";
     if(value== "=") {
@@ -54,7 +54,7 @@ function click_Mouse(value) {
         document.getElementById("pheptinh").value = gtri;
     }
 }
-function click_Xoa() {
+function clickXoa() {
     document.getElementById("pheptinh").value = null;
     document.getElementById("show_pt").value = null;
 }

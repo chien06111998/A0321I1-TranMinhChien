@@ -1,7 +1,7 @@
-function click_Yes() {
+function clickYes() {
     alert("<3")
 }
-function click_No() {
+function clickNo() {
     console.log("Ok");
     var x = Math.round(Math.random() * window.innerWidth);
     var y = Math.round(Math.random() * window.innerHeight);

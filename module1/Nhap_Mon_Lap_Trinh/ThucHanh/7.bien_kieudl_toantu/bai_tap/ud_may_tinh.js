@@ -26,7 +26,7 @@
 //     document.getElementById("ketqua").innerHTML = "Thương: "+gtri_a+ " / "+gtri_b+ " là: " +(gtri_a/gtri_b);
 // }
 
-function ketqua() {
+function ketQua() {
     var a = parseInt(document.getElementById("soa").value);
     var b = parseInt(document.getElementById("sob").value);
     var phep_tinh = document.getElementById("phep_tinh").value;

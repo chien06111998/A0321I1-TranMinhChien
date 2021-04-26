@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vòng lặp while</title>
+</head>
+<body>
+    <h2>Bài 1:</h2>
+    <lable id = "demo"></lable>
+    <h2>Bài 2:</h2>
+    <lable id = "demo2"></lable>
+    <script>
+        //Bài 1:
+        var num = parseInt(prompt("Nhập n: "));
+        var s = 0;
+        while (num != -1) {
+            num = parseInt(prompt("Nhập n: "));
+            alert(num);
+            s += num;
+        }
+        document.getElementById("demo").innerHTML = s;
+        //Bài 2:
+        var i=1;
+        while (i<100) {
+            document.write("<hr width = "+ i + "%>");
+            i++;
+        }
+    </script>
+</body>
+</html>

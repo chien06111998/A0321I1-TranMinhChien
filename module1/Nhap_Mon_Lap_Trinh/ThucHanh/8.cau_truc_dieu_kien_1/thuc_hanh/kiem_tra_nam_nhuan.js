@@ -1,4 +1,4 @@
-function kiemtranamnhuan() {
+function kiemTraNamNhuan() {
     var nam = parseInt(document.getElementById("nam").value);
     if(nam % 4 == 0 && nam % 100 !=0)
         document.getElementById("ket_qua").innerHTML = "Năm "+ nam + " Là năm nhuận.";
