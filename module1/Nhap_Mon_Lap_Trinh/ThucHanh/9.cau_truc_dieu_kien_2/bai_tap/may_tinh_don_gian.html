@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy Tính Đơn Giản</title>
+    <style type="text/css" media="all">
+        #table {
+            border: 8px;
+            padding: 8px;
+        }
+        td {
+            width: 10px;
+            height: 10px;
+        }
+        input {
+            width: 30px;
+            height: 30px;
+        }
+        #pheptinh {
+            width: 153px;
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+<!--    <div>-->
+<!--        <input type="text" id="pheptinh" readonly/>-->
+<!--    </div>-->
+<!--    <table id="table" border="8px">-->
+<!--        <tr>-->
+<!--            <td>-->
+<!--                <input type="button" id="mot_1" value="1" onclick="click_Mouse1()"/>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <input type="button" id="hai_2" value="2" onclick="click_Mouse2()"/>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <input type="button" id="ba_3" value="3" onclick="click_Mouse3()"/>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <input type="button" id="cong" value="+" onclick="click_Mouse4()"/>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>-->
+<!--                <input type="button" id="bon_4" value="4" onclick="click_Mouse5()"/>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <input type="button" id="nam_5" value="5" onclick="click_Mouse6()"/>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <input type="button" id="sau_6" value="6" onclick="click_Mouse7()"/>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <input type="button" id="tru" value="-" onclick="click_Mouse8()"/>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>-->
+<!--                <input type="button" id="bay_7" value="7" onclick="click_Mouse9()"/>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <input type="button" id="tam_8" value="8" onclick="click_Mouse10()"/>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <input type="button" id="chin_9" value="9" onclick="click_Mouse11()"/>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <input type="button" id="nhan" value="x" onclick="click_Mouse12()"/>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>-->
+<!--                <input type="button" id="xoa" value="C" onclick="click_Xoa()"/>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <input type="button" id="khong_0" value="0" onclick="click_Mouse13()"/>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <input type="button" id="bang" value="=" onclick="tinh()"/>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <input type="button" id="chia" value="/" onclick="click_Mouse14()"/>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--    </table>-->
+    <h1>Cách 2:</h1>
+    <div>
+        <input type="text" id="pheptinh" readonly/>
+    </div>
+    <table id="table" border="8px">
+        <tr>
+            <td>
+                <input type="button" id="mot_1" value="1" onclick="click_Mouse(1)"/>
+            </td>
+            <td>
+                <input type="button" id="hai_2" value="2" onclick="click_Mouse(2)"/>
+            </td>
+            <td>
+                <input type="button" id="ba_3" value="3" onclick="click_Mouse(3)"/>
+            </td>
+            <td>
+                <input type="button" id="cong" value="+" onclick="click_Mouse('+')"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" id="bon_4" value="4" onclick="click_Mouse(4)"/>
+            </td>
+            <td>
+                <input type="button" id="nam_5" value="5" onclick="click_Mouse(5)"/>
+            </td>
+            <td>
+                <input type="button" id="sau_6" value="6" onclick="click_Mouse(6)"/>
+            </td>
+            <td>
+                <input type="button" id="tru" value="-" onclick="click_Mouse('-')"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" id="bay_7" value="7" onclick="click_Mouse(7)"/>
+            </td>
+            <td>
+                <input type="button" id="tam_8" value="8" onclick="click_Mouse(8)"/>
+            </td>
+            <td>
+                <input type="button" id="chin_9" value="9" onclick="click_Mouse(9)"/>
+            </td>
+            <td>
+                <input type="button" id="nhan" value="x" name = "*" onclick="click_Mouse('*')"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" id="xoa" value="C" onclick="click_Xoa()"/>
+            </td>
+            <td>
+                <input type="button" id="khong_0" value="0" onclick="click_Mouse(0)"/>
+            </td>
+            <td>
+                <input type="button" id="bang" value="=" onclick="click_Mouse('=')"/>
+            </td>
+            <td>
+                <input type="button" id="chia" value="/" onclick="click_Mouse('/')"/>
+            </td>
+        </tr>
+    </table>
+    <script src="may_tinh_don_gian.js"></script>
+</body>
+</html>
