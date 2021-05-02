@@ -6,17 +6,16 @@
 </head>
 <body>
     <h2>Bài 1:</h2>
-    <lable id = "demo"></lable>
+    <label id = "demo"></label>
     <h2>Bài 2:</h2>
-    <lable id = "demo2"></lable>
+    <label id = "demo2"></label>
     <script>
         //Bài 1:
-        var num = parseInt(prompt("Nhập n: "));
-        var s = 0;
+        let num = parseInt(prompt("Nhập n: "));
+        let s = 0;
         while (num != -1) {
-            num = parseInt(prompt("Nhập n: "));
-            alert(num);
             s += num;
+            num = parseInt(prompt("Nhập n: "));
         }
         document.getElementById("demo").innerHTML = s;
         //Bài 2:

@@ -6,24 +6,31 @@
 </head>
 <body>
     <h2>Bài 1:</h2>
+    <input type="button" value="Hiển thị chuỗi" onclick="bai1();">
     <value id = "demo"></value>
     <h2>Bài 2: </h2>
+    <input type="button" value="Tính tông" onclick="bai2();">
     <value id = "demo2"></value>
     <script>
         //Bài 1:
-        let text = " ";
-        let i;
-        for (i = 1; i<=5; i++) {
-            text += "The number is "+ i + " <br>";
+        function bai1(){
+            let text = " ";
+            let i;
+            for (i = 1; i<=5; i++) {
+                text += "The number is "+ i + " <br>";
+            }
+            document.getElementById("demo").innerHTML = text;
         }
-        document.getElementById("demo").innerHTML = text;
         //Bài 2:
-        let n = prompt("Nhập n: ");
-        var s = 0;
-        for (let i=1;i<=n;i++) {
-            s+= i;
+        function bai2(){
+            let n = prompt("Nhập n: ");
+            var s = 0;
+            for (let i=1;i<=n;i++) {
+                s+= i;
+            }
+            document.getElementById("demo2").innerHTML = s;
         }
-        document.getElementById("demo2").innerHTML = s;
+
     </script>
 </body>
 </html>
