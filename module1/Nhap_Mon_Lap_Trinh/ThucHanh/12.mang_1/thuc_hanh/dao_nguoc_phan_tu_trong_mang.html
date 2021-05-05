@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = [3,1,-5,6,8,9,10,4];
+    document.write("Mãng ban đầu: "+ a +"</br>");
+    let  first = 0, last = a.length-1;
+    while (first < last) {
+        let b = a[first];
+        a[first] = a[last];
+        a[last] = b;
+        first++;
+        last--;
+    }
+    document.write("Mảng sau khi đảo: " + a);
+</script>
