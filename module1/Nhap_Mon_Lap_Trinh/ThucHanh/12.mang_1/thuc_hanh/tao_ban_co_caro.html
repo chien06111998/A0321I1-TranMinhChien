@@ -5,38 +5,85 @@
     <title>Title</title>
 </head>
 <body>
-    <h2>Caro Game Simple</h2>
-    <label id="carogame"/>
-    <input type="text" value="Change Value" onclick="changeValue();"/>
-</body>
-</html>
-<script>
-    let b = document.getElementById("carogame");
-    let board = [];
-    let data = "";
-    for (let i = 0; i<5 ; i++) {
-        board[i] = new Array(0,0,0,0,0);
-    }
-    for(let i = 0; i<5; i++){
-        data+="<br/>";
-        for (let j = 0; j<5; j++) {
-            data += board[i][j] + "&nbsp;&nbsp;";
-        }
-    }
-    data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>";
-    b.innerText = data;
-    function changeValue() {
-        let positionX = prompt("X: ");
-        let positionY = prompt("Y: ");
-        data = "";
-        board[positionX][positionY] = "x";
-        for (let i = 0 ; i<5 ; i++) {
-            data += "<br/>";
-            for (let j=0; j<5; j++){
-                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp";
+    <p id ="hienthi"></p>
+    <script>
+        let player1 = true;
+        let arr = new Array(10);
+        for (let i=0; i<10; i++) {
+            arr[i] = new Array(10);
+            for (let j=0; j<10;j++) {
+                arr[i][j] = "";
             }
         }
-        data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
-        b.innerText = "<hr/>" + data;
-    }
-</script>
+        hienthi();
+        function hienthi(){
+            let tableString = '<table border="1">';
+            for (let i=0;i<10;i++){
+                tableString+='<tr>';
+                for (let j=0;j<10;j++) {
+                    tableString += '<td width ="20" height ="20" onclick="play('+i+','+j+')">'+arr[i][j]+'</td>';
+                }
+                tableString+='</tr>';
+            }
+            document.getElementById("hienthi").innerHTML = tableString;
+        }
+        function play(i,j) {
+            if(player1 && !checkPlayer(i,j)) {
+                arr[i][j] = "X";
+                player1 = false;
+                if(checkWin()) {
+                    alert("Người chơi 1 chiến thắng");
+                }
+            } else if(!player1 && !checkPlayer(i,j)){
+                arr[i][j] = "O";
+                player1=true;
+                if(checkWin()) {
+                    alert("Người chơi 2 chiến thắng");
+                }
+            }
+            hienthi();
+        }
+        function checkPlayer(i,j) {
+            if(arr[i][j] == "X" || arr[i][j] == "O"){
+                alert("Ô này đánh rồi bạn ơi.");
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function checkWin() {
+            for (let i=0;i<10;i++){
+                for (let j=0;j<10;j++) {
+                    if(arr[i][j]=="X") {
+                        if(arr[i][j+1]=="X" && arr[i][j+2]=="X"){
+                            return true;
+                        }
+                        if(arr[i+1][j]=="X" && arr[i+2][j]=="X"){
+                            return true;
+                        }
+                        if(arr[i+1][j+1]=="X" && arr[i+2][j+2]=="X"){
+                            return true;
+                        }
+                        if(arr[i-1][j+1]=="X" && arr[i-2][j+2]=="X"){
+                            return true;
+                        }
+                    } else if(arr[i][j]=="O") {
+                        if(arr[i][j+1]=="O" && arr[i][j+2]=="O"){
+                            return true;
+                        }
+                        if(arr[i+1][j]=="O" && arr[i+2][j]=="O"){
+                            return true;
+                        }
+                        if(arr[i+1][j+1]=="O" && arr[i+2][j+2]=="O"){
+                            return true;
+                        }
+                        if(arr[i-1][j+1]=="O" && arr[i-2][j+2]=="O"){
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
