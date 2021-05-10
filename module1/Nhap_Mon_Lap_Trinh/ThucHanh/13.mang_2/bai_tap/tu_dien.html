@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="txtEng"/>
+    <input type="button" value="Chuyển" onclick="tuDien();"/>
+</body>
+</html>
+<script>
+    function tuDien() {
+        var eng = document.getElementById("txtEng").value;
+        let arr1 = ["Hello", "Age", "Name", "Class", "Kiss"];
+        let arr2 = ["Xin chào", "Tuổi", "Tên", "Lớp", "Hôn"];
+        for (let i=0; i<arr1.length; i++) {
+            if (eng != arr1[i]) {
+                document.write("Không tìm thấy");
+            }
+            else {
+                for (let j=i; j<arr2.length; j++) {
+                    document.write(arr1[i]+" Chuyển thành "+ arr2[j]);
+                    break;
+                }
+            }
+        }
+}
+</script>

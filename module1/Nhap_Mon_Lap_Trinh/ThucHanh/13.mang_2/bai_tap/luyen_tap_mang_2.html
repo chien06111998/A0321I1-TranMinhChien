@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="Bài 1" onclick="bai1();"/> <br> <br>
+    <input type="button" value="Bài 2" onclick="bai2();"/> <br> <br>
+    <input type="button" value="Bài 3" onclick="bai3();"/> <br> <br>
+    <input type="button" value="Bài 4" onclick="bai4();"/> <br> <br>
+    <input type="button" value="Bài 5" onclick="bai5();"/> <br> <br>
+    <input type="button" value="Bài 6" onclick="bai6();"/> <br> <br>
+</body>
+</html>
+<script>
+    function bai1() {
+        let a = [
+            [1,2,1,24],
+            [8,11,9,4],
+            [7,4,28,14],
+            [3,10,26,7]
+        ];
+        for (let i in a) {
+            document.write("Row "+i +"</br>");
+            for (let j in a) {
+                document.write(" "+ a[i][j] + "</br>");
+            }
+        }
+    }
+    function bai2() {
+        let arr=["c","s","c",2,6,1];
+        document.write("Mảng sau khi đảo ngược là: " +arr.reverse());
+    }
+    function bai3() {
+        let n = prompt("Nhập độ dài mảng: ");
+        let arr = [];
+        for (let i=0; i<n; i++) {
+            arr[i] = prompt("Giá trị a["+i+"]: ");
+        }
+        document.write("Mảng là: "+ arr +"</br>");
+        let count = 0;
+        for (let i = 0; i<arr.length; i++) {
+            if (isNaN(arr[i])==false){
+                count++;
+            }
+        }
+        document.write("Số ký tự số trong mảng là: "+count);
+    }
+    function bai4() {
+        let n = prompt("Nhập độ dài mảng: ");
+        let arr = [];
+        for (let i=0; i<n; i++) {
+            arr[i] = prompt("Giá trị a["+i+"]: ");
+        }
+        document.write("Mảng là: "+arr+ "</br>");
+        function wordCount(str) {
+            return str.split(" ").length;
+        }
+        for (let i=0; i<arr.length; i++) {
+            document.write(wordCount(arr[i]));
+        }
+        // document.write( wordCount(arr));
+        // let count=0;
+        // for (let i = 0; i<arr.length;i++) {
+        //     if (isNaN(arr[i])==true) {
+        //         if (arr[i] === " ") {
+        //             count = +1;
+        //         }
+        //         count++;
+        //     }
+        // }
+    }
+</script>

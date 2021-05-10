@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="Bài 1" onclick="bai1();"/>
+    </br>
+    <input type="button" value="Bài 2" onclick="bai2();"/>
+    </br>
+    <input type="button" value="Bài 3" onclick="bai3();"/>
+</body>
+</html>
+<script>
+    function bai1() {
+        var myColor = ["Red", "Green", "While", "Black"];
+        for (let i = 0; i< myColor.length; i++) {
+            var a = myColor.join(",");
+        }
+        document.write(a);
+    }
+    function bai2() {
+        var n = window.prompt();
+        var str = n.toString();
+        var arr = [str[0]];
+        for (let i = 1; i< str.length; i++){
+            if (str[i-1] %2===0 && str[i]%2===0){
+                arr.push("-", str[i]);
+            }
+            else
+                arr.push(str[i]);
+        }
+        document.write(arr.join(''));
+    }
+    function bai3() {
+        var str = prompt("Nhập chuổi: ");
+        document.write("Ban đầu: " + str + "</br>");
+        var arr = [str[-1]];
+        arr.push(str.toUpperCase());
+        document.write("Sau khi chuyển: " + arr);
+    }
+</script>

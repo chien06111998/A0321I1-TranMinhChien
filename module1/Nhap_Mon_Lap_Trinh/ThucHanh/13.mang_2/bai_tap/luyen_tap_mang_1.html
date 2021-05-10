@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="Bài 1" onclick="bai1();"/> <br> <br>
+    <input type="button" value="Bài 2" onclick="bai2();"/> <br> <br>
+    <input type="button" value="Bài 3" onclick="bai3();"/> <br> <br>
+    <input type="button" value="Bài 4" onclick="bai4();"/> <br> <br>
+    <input type="button" value="Bài 5" onclick="bai5();"/> <br> <br>
+    <input type="button" value="Bài 6" onclick="bai6();"/> <br> <br>
+    <input type="button" value="Bài 7" onclick="bai7();"/> <br> <br>
+    <input type="button" value="Bài 8" onclick="bai8();"/> <br> <br>
+    <input type="button" value="Bài 9" onclick="bai9();"/> <br> <br>
+</body>
+</html>
+<script>
+    function bai1() {
+        let arr = [1,3,7,11,20,34,2,6,7,10];
+        var count = 0;
+        for (let i = 0; i<arr.length; i++) {
+            if (arr[i] >= 10) {
+                count++;
+            }
+        }
+        document.write("Có "+count+ " giá trị lớn hơn hoặc bằng 10");
+    }
+    function bai2() {
+        let arr = [1,3,7,11,20,34,2,6,7,10];
+        var max = arr[0], index;
+        for (var i= 1; i< arr.length; i++) {
+            if (max < arr[i]){
+                max = arr[i];
+                index=i;
+            }
+        }
+        document.write("Giá trị lớn nhất là: " + max+ ", tại vị trí: arr["+index+"].");
+    }function bai3() {
+        let arr = [0,3,-7,11,20,12,-2,-6,7,10];
+        var max = arr[0], sum = 0;
+        for (var i= 1; i< arr.length; i++) {
+            if (max < arr[i]){
+                max = arr[i];
+            }
+            sum+=arr[i];
+        }
+        let tb = sum/i;
+        document.write("Giá trị lớn nhất là: "+max+"</br>");
+        document.write("Trung bình mảng là: "+tb);
+    }function bai4() {
+        let n = prompt("Nhập vào độ dài mảng");
+        let arr = [n];
+        for (let i =0; i<n; i++) {
+            arr[i] = prompt("Nhập giá trị thứ "+i+ ": ");
+        }
+        document.write("Mảng ban đầu: "+arr+ "</br>");
+        let arr1 = arr.reverse();
+        document.write("Mảng sau khi đảo ngược là: " +arr1);
+    }function bai5() {
+        let arr = [0,3,-7,11,20,12,-2,-6,7,10];
+        let count = 0;
+        for (let i= 0; i<arr.length; i++) {
+            if(arr[i] < 0) {
+                count++;
+            }
+        }
+        document.write("Số nguyên âm trong mảng là: "+count);
+    }function bai6() {
+        let arr = [];
+        for (let i =0; i<5; i++) {
+           arr[i] = prompt("Nhập giá trị thứ "+i+": ");
+        }
+        let v = prompt("Nhập giá trị cần tìm: ");
+        if (arr.includes(v)) {
+            document.write("v is in the array");
+        }
+        else
+            document.write("v is not in the array");
+        // function kiemTra() {
+        //     for (let j = 0; j < arr.length; j++) {
+        //         if (v == arr[j]) {
+        //             return 1;
+        //         }
+        //     }
+        //     return 0;
+        // }
+        // if (kiemTra()) {
+        //     document.write("V is in the array");
+        // }
+        // else
+        //     document.write("V is not in the array");
+    }
+    function bai7() {
+        let arr = [];
+        for (let i =0; i<10; i++) {
+            arr[i] = prompt("Nhập giá trị thứ "+(i+1)+": ");
+        }
+        document.write("Mảng ban đầu là: " +arr +"</br>");
+        let v = prompt("Nhập v: ");
+        for (let i=0; i<arr.length; i++) {
+            if (v === arr[i]) {
+                arr.splice(i,1);
+            }
+        }
+        document.write("Mảng sau khi xóa v là: " +arr);
+    }
+    function bai8() {
+        let arr = [];
+        for (let i =0; i<5; i++) {
+            arr[i] = prompt("Nhập giá trị thứ "+(i+1)+": ");
+        }
+        arr.sort(function (a,b) {
+            return b-a;
+        });
+        // let temp;
+        // for (let i = 1; i<arr.length; i++) {
+        //     for (let j = i+1; j<arr.length; j++) {
+        //         if (arr[i] > arr[j]) {
+        //             temp = arr[i];
+        //             arr[i] = arr[j];
+        //             arr[j] = temp;
+        //         }
+        //     }
+        // }
+        console.log(arr);
+    }
+    function bai9() {
+        let a = [] , b = [];
+        for (let i =0; i<5; i++) {
+            a[i] = prompt("Nhập giá trị thứ "+(i+1)+": ");
+        }
+        for (let i =0 ; i<5; i++) {
+            b[i] = prompt("Nhập giá trị thứ "+(i+1)+": ");
+        }
+        let c = new Array(10);
+        document.write("Chuổi c sau khi ghép là: "+a.concat(b));
+    }
+</script>
