@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="Bài 1" onclick="alertMessage();"/> <br><br>
+    <input type="button" value="Bài 2" onclick="bai2();"/> <br><br>
+    <input type="button" value="Bài 3" onclick="bai3();"/> <br><br>
+    <input type="button" value="Bài 4" onclick="bai4();"/> <br><br>
+    <input type="button" value="Bài 5" onclick="bai5();"/> <br><br>
+</body>
+</html>
+<script>
+    function alertMessage() {
+        alert("Xin chao");
+    }
+    function bai2() {
+        let x = parseInt(prompt("Nhập x: "));
+        x += 1;
+        document.write(x);
+    }
+    function bai3() {
+        let a = parseInt(prompt("Nhập a= "));
+        let b = parseInt(prompt("Nhập b= "));
+        if (a>b) {
+            document.write("a > b")
+        }
+        else
+            document.write("Tổng là: " + (a+b));
+    }
+    function bai4() {
+        function addNumbers() {
+            firstNum = 4;
+            secondNum = 8;
+            result = firstNum + secondNum;
+            return result;
+        }
+        result = 0;
+        alert("Giá trị result ban đầu" + result);
+        result = addNumbers();
+        alert("Giá trị result sau khi gọi" + result);
+    }
+    function bai5() {
+        let arr1 = ["Plaris", "Aldebaran", "Deneb", "Vega", "Alair", "Dubhe", "Regulus"];
+        let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        let name = prompt("Nhập tên: ");
+        console.log(name);
+        for (let i = 0; i < arr1.length; i++) {
+            if (name = arr1[i]) {
+                console.log(name);
+                document.write("Tên ngôi sao là: " + arr1[i] + "</br>");
+                for (let j = i; j < arr2.length; j++) {
+                    document.write("Tên chòm sao là: " + arr2[i] + "</br>");
+                    break;
+                }
+            } else
+                document.write("Không có tên ngôi sao");
+        }
+    }
+</script>

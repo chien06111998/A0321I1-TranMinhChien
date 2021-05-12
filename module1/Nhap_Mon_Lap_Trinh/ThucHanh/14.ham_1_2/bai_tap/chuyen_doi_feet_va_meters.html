@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="count"/>
+    <select name="chon" id="chon">
+        <option value="met">Met -> Feet</option>
+        <option value="feet">Feet -> Met</option>
+    </select>
+    <input type="button" onclick="chuyenDoi();" value="Chuyển"/>
+    <div id="kq"></div>
+</body>
+</html>
+<script>
+    function chuyenDoi() {
+        let click = document.getElementById("chon").value;
+        var nhap = parseInt(document.getElementById("count").value);
+        if (click == "met") {
+            console.log(click);
+            console.log(nhap);
+            document.getElementById("kq").innerHTML = nhap + " met = " + nhap * 3.279 + " feet";
+        } else {
+            console.log(click);
+            document.getElementById("kq").innerHTML = nhap + " feet = " + nhap * 0.305 + " met";
+        }
+    }
+</script>
