@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class myDate {
+        constructor(day,month,year) {
+            //super(props);
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+        getDay() {
+            return this.day;
+        }
+        getMonth() {
+            return this.month;
+        }
+        getYear() {
+            return this.year;
+        }
+        setDay(day){
+            this.day = day;
+        }
+        setMonth(month) {
+            this.month = month;
+        }
+        setYear(year) {
+            this.year = year;
+        }
+        //toString
+        toString() {
+            return this.day+ "/" + this.month + "/" +this.year;
+        }
+        setDate(ngay, thang, nam) {
+            this.day = ngay;
+            this.month = thang;
+            this.year = nam;
+        }
+    }
+    let date = new myDate(20,11,2021);
+    let ngay = date.getDay();
+    let thang = date.getMonth();
+    let nam = date.getYear();
+    alert(ngay+"/"+thang+"/"+nam);
+    date.setDay(12);
+    alert(ngay+"/"+thang+"/"+nam);
+    date.setDay(15);
+    alert(date.toString());
+    //dùng setDate
+    date.setDate(1,1,2021);
+    alert(date.toString());
+</script>

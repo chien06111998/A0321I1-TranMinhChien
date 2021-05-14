@@ -7,7 +7,8 @@
 <body>
     <h1>Quản lý sản phẩm</h1>
     <input type="text" placeholder="nhập tên SP" id="name">
-    <input type="button" onclick="addNewProduct()" value="Add"><br>
+    <input type="button" onclick="addNewProduct()" value="Add">
+    <input type="button" onclick="searchProduct()" value="Search"><br>
     <span> Số lượng sản phẩm</span>
     <span id="soLuong"></span>
     <p id="hienThi"></p>
@@ -16,7 +17,6 @@
 <script>
     let listProduct = ["Iphone", "Nokia", "Samsung"];
     display(listProduct);
-
     function addNewProduct() {
         let newName = document.getElementById("name").value;
         if (newName != "") {
@@ -65,5 +65,24 @@
             alert("ban không muốn xóa");
         }
         display(listProduct);
+    }
+    function searchProduct() {
+        let searchName = document.getElementById("name").value;
+        for (let i = 0; i<listProduct.length; i++) {
+            console.log(listProduct[i]);
+            if (searchName != listProduct[i]) {
+                console.log(searchName);
+                alert("Sản phẩm không tồn tại.");
+            }
+            else {
+                listProduct[i] = searchName;
+                return false;
+            }
+        }
+        if (false) {
+            console.log(listProduct);
+            display(listProduct);
+        }
+        document.getElementById("Name").value = "";
     }
 </script>

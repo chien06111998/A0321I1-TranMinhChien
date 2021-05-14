@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class circle {
+        constructor(radius, color) {
+            this.radius = radius;
+            this.color = color;
+        }
+        getRadius() {
+            return this.radius;
+        }
+        getColor() {
+            return this.color;
+        }
+        getArea(radius) {
+            return Math.PI * this.radius * this.radius;
+        }
+    }
+    let circle1 = new circle(2);
+    let radius = circle1.getRadius();
+    let area = circle1.getArea();
+    alert("Radius: "+ radius + "; Area: " + area);
+</script>

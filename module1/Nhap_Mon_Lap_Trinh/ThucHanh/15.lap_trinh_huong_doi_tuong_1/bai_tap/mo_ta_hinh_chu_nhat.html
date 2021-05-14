@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <canvas id="veCanvas" width="400" height="400" style="border: 2px , solid red">
+
+    </canvas>
+</body>
+</html>
+<script>
+    class HinhChuNhat {
+        constructor(height, width) {
+            this.height = height;
+            this.width = width;
+        }
+        getHeight() {
+            return this.height;
+        }
+        getWidth() {
+            return this.width;
+        }
+        setHeight(height) {
+            this.height = height;
+        }
+        setWidth(width) {
+            this.width = width;
+        }
+        getDienTich(height, width) {
+            return this.height * this.width;
+        }
+        getChuVi(height, width) {
+            return (this.height + this.width)/2;
+        }
+    }
+    let a = parseInt(prompt("Nhap chiều dài: a = "));
+    let b = parseInt(prompt("Nhập chiều rộng: b = "));
+    let hcn = new HinhChuNhat(a,b);
+    a = hcn.getHeight();
+    b = hcn.getWidth();
+    let kq = hcn.getDienTich();
+    let cv = hcn.getChuVi();
+    alert("Chiều dài: a = " + a + "\n Chiều rộng: b = " + b + "\n Diện tích = "+ kq + "\n Chu vi = " + cv);
+    function drawCanvas() {
+        let myCanvas = document.getElementById("veCanvas");
+        let x = myCanvas.getContext("2d");
+        x.fillStyle = "green";
+        x.fillRect (50 ,50 , a, b);
+    }
+    window.onload = drawCanvas();
+</script>
