@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class SwitchButton {
+        constructor(status, lamp) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+        getStatus(){
+            return this.status;
+        }
+        getLamp(){
+            return this.lamp;
+        }
+        setStatus(status) {
+            this.status = status;
+        }
+        setLamp(lamp) {
+            this.lamp = lamp;
+        }
+        switchButton() {
+            if (this.lamp > 0) {
+                this.lamp--;
+            }
+        }
+        connectToLamp(electricLamp) {
+            return electricLamp.electricLamp();
+        }
+        switchOff() {
+            if (this.status == "Off") {
+                alert("Công tắc tắt");
+            }
+        }
+        switchOn() {
+            if (this.status == "On") {
+                alert("Công tắc bật");
+            }
+        }
+    }
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status;
+        }
+        getStatus() {
+            return this.status;
+        }
+        setStatus(status){
+            this.status = status;
+        }
+        electricLamp (){
+            if (this.status == "on") {
+                this.TurnOn();
+            }
+            else {
+                this.TurnOff();
+            }
+        }
+        TurnOn() {
+            if (this.status == true) {
+                alert("Đèn sáng");
+            }
+        }
+        TurnOff() {
+            if (this.status == false) {
+                alert("Đèn tắt");
+            }
+        }
+    }
+    let bongDen = new ElectricLamp("On");
+    let congTac = new SwitchButton("On", 10);
+    while (congTac.lamp>0) {
+        if (congTac.status == "On") {
+            congTac.switchOn();
+            congTac.connectToLamp();
+        }
+        else {
+            congTac.switchOff();
+            congTac.connectToLamp();
+        }
+    }
+</script>

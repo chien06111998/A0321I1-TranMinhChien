@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Temperature {
+        constructor(doC, doF, kenvin) {
+            this.doC = doC;
+            this.doF = doF;
+            this.kenvin = kenvin;
+        }
+        getDoC(){
+            return this.doC;
+        }
+        getDoF(){
+            return this.doF;
+        }getKenvin(){
+            return this.kenvin;
+        }
+    }
+    let kenvin, doF;
+    let temperature = new Temperature(25, doF, kenvin)
+    doF = 25 * 9 / 5 + 32;
+    kenvin = 25 + 273.15;
+    alert("25 độ C đổi thành: "+doF+" dộ F và "+kenvin+ " độ K");
+</script>
