@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let hoTen = prompt("Nhập tên: ");
+    let epThuong = hoTen.toLowerCase().split(" ");
+    let str = " ";
+    for (let i = 0; i<epThuong.length; i++) {
+        if (epThuong[i] == " ") {
+            str = epThuong[i+1].toUpperCase();
+        }
+    }
+    console.log(str);
+</script>

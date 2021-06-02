@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let n = parseInt(prompt("Nhập số phần tử mảng: "));
+    let a = [n], b = [n];
+    let arr = [];
+    for (let i = 0; i<n; i++) {
+        a[i] = parseInt(prompt("Nhập a["+i+"] = "));
+    }
+    for (let i = 0; i<n; i++) {
+        b[i] = parseInt(prompt("Nhập b[" + i + "] = "));
+    }
+    var index = 0;
+    for (let i = 0; i<n; i++) {
+        for (let j = 0; j<n; j++) {
+            if (b[i] == a[j]) {
+                arr[index] = j;
+                index++;
+            }
+        }
+    }
+    var f = [], k = 0;
+    console.log(a.toString());
+    console.log(b.toString());
+    console.log(arr.toString());// 2,1
+    for (let i = 0; i<n; i++) {
+        if (arr.indexOf(i) == -1) {
+            f[k] = b[i];
+            k++;
+        }
+    }
+    document.write("Mảng a: " + a + "<br>");
+    document.write("Mảng b: " + b + "<br>");
+    document.write("b/a = " + f);
+</script>

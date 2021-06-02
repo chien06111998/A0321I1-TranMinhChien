@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    do{
+        console.log("--------Menu---------");
+        console.log("1. Cafe");
+        console.log("2. Cam vắt");
+        console.log("3. Nước ép cà rốt");
+        console.log("4. Nước ép cà chua");
+        console.log("5. Nước lọc");
+        console.log("6. Nước dừa");
+        console.log("7. Thoát");
+        do {
+            var n = parseInt(prompt("Bấm chọn: "));
+        } while (n<1 || n>8);
+        let soLuong;
+        switch (n) {
+            case 1:
+                soLuong = parseInt(prompt("Nhập số lượng: "));
+                alert("Đơn của bạn đặt là: Cafe, số lượng: "+soLuong+ ", có giá tiền: " + soLuong * 12000 + " vnđ");
+                break;
+            case 2:
+                soLuong = parseInt(prompt("Nhập số lượng: "));
+                alert("Đơn của bạn đặt là: Cam vắt, số lượng: "+soLuong+ ", có giá tiền: " + soLuong * 17000 + " vnđ");
+                break;
+            case 3:
+                soLuong = parseInt(prompt("Nhập số lượng: "));
+                alert("Đơn của bạn đặt là: Nước ép cà rốt, số lượng: "+soLuong+ ", có giá tiền: " + soLuong * 15000 + " vnđ");
+                break;
+            case 4:
+                soLuong = parseInt(prompt("Nhập số lượng: "));
+                alert("Đơn của bạn đặt là: Nước ép cà chua, số lượng: "+soLuong+ ", có giá tiền: " + soLuong * 13000 + " vnđ");
+                break;
+            case 5:
+                soLuong = parseInt(prompt("Nhập số lượng: "));
+                alert("Đơn của bạn đặt là: Nước lọc, số lượng: "+soLuong+ ", có giá tiền: " + soLuong * 5000 + " vnđ");
+                break;
+            case 6:
+                soLuong = parseInt(prompt("Nhập số lượng: "));
+                alert("Đơn của bạn đặt là: Nước dừa, số lượng: "+soLuong+ ", có giá tiền: " + soLuong * 20000 + " vnđ");
+                break;
+            case 7:
+                alert("Thoát đặt hàng")
+                break;
+        }
+    } while (n!=0);
+</script>
