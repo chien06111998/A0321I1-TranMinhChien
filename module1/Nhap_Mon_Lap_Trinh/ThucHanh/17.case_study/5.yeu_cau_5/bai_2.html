@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let n = prompt("Nhập n: ");
+    let m = prompt("Nhập m: ");
+    let matran = [];
+    let primeArr = []
+    let count = 1, num = 3, index = 0;
+    for (let i = 0; i<n; i++) {
+        let row = [];
+        for (let j = 0; j<m; j++) {
+            row[j] = parseInt(prompt("Nhập số vào ma trận: "));
+        }
+        matran[i] = row;
+    }
+
+    function checkPrime(num) {
+        if (num < 2) {
+            return false;
+        }
+        for (let i = 2; i<= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    for (let i = 0; i<matran.length; i++) {
+        for (let j = 0; j<matran[i].length; j++) {
+            if (checkPrime(matran[i][j])) {
+                primeArr.push(matran[i][j]);
+                index++;
+            }
+        }
+    }
+    console.table(matran);
+    console.log("Mảng có " +index+" số nguyên tố là: " +primeArr);
+</script>

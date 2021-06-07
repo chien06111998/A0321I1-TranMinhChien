@@ -9,16 +9,14 @@
 </body>
 </html>
 <script>
-    let h = 5;
+    let h = 8;
     for (let i = 1; i<=h;i++) {
         for (let j = 1; j< 2*h; j++) {
             if(Math.abs(h-j) < Math.abs(i-1)) {
-                if() {
-                    document.write("*")
-                }
-                else {
-                    document.write("-");
-                }
+                    document.write("*");
+            }
+            else {
+                document.write('&nbsp;&nbsp');
             }
         }
         document.write("<br>");

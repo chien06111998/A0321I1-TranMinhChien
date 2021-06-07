@@ -11,12 +11,12 @@
 <script>
     let h = 5;
     for (let i = 1; i<=h;i++) {
-        for (let j = 1; j< 2*h; j++) {
+        for (let j = 1; j < 2*h; j++) {
             if(Math.abs(h-j) < Math.abs(i-1)) {
                 document.write("*");
             }
             else {
-                document.write("-");
+                document.write('&nbsp;&nbsp');
             }
         }
         document.write("<br>");

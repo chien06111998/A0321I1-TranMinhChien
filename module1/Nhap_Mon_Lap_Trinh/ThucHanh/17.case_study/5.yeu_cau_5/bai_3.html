@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let n = prompt("Nhập n: ");
+    let m = prompt("Nhập m: ");
+    let matran = [];
+    for (let i = 0; i<n; i++) {
+        let row = [];
+        for (let j = 0; j<m; j++) {
+            row[j] = parseInt(prompt("Nhập số vào ma trận: "));
+        }
+        matran[i] = row;
+    }
+    var max = matran[0][0], min = matran[0][0];
+    for (let i = 1; i<matran.length; i++) {
+        for (let j = 1; j<matran[i].length; j++) {
+            if (min > matran[i][j]) {
+                min = matran[i][j];
+            }
+            if (max < matran[i][j]) {
+                max = matran[i][j];
+            }
+        }
+    }
+    console.table(matran);
+    console.log("Max là: " + max + ", Min là: " + min);
+</script>

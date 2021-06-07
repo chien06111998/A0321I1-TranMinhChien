@@ -9,13 +9,38 @@
 </body>
 </html>
 <script>
-    let hoTen = prompt("Nhập tên: ");
-    let epThuong = hoTen.toLowerCase().split(" ");
-    let str = " ";
-    for (let i = 0; i<epThuong.length; i++) {
-        if (epThuong[i] == " ") {
-            str = epThuong[i+1].toUpperCase();
+    function xauKyTu(name) {
+        name = name.trim().toLowerCase();
+        let nameArr = Array.from(name);
+        for (let i = 0; i < nameArr.length - 1; i++) {
+            if (nameArr[0] === " " && nameArr[i+1] === " ") {
+                for (let j = i+1; j<nameArr.length-1; j++) {
+                    nameArr[j] = nameArr[j+1];
+                }
+                i--;
+                nameArr.pop();
+            }
         }
+        nameArr[0] = nameArr[0].toUpperCase();
+        for (let i = 0; i<nameArr.length-1; i++) {
+            if (nameArr[i] === " ") {
+                nameArr[i+1] = nameArr[i+1].toUpperCase();
+            }
+        }
+        return nameArr.join("");
     }
-    console.log(str);
+
+    function maxLength(name) {
+        let arrName = name.split(" ");
+        let maxLength = arrName[0];
+        for (let i = 1; i<arrName.length; i++) {
+            if (maxLength.length < arrName[i].length) {
+                maxLength = arrName[i];
+            }
+        }
+        return maxLength;
+    }
+
+    let name = prompt("Nhập tên: ");
+    alert("Tên ban đầu: " + name + "\n Tên sau khi chuẩn hóa: " + xauKyTu(name) + "\n Từ dài nhất là: " + maxLength(xauKyTu(name)));
 </script>

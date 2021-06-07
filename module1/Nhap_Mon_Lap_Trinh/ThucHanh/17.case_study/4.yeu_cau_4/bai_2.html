@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function differentSymbolsNaive(str) {
+        let arr = [];
+        for (let i = 0; i<str.length; i++) {
+            if (arr.indexOf(str.charAt(i)) === -1) {
+                arr.push(str.charAt(i))
+            }
+        }
+        return arr.length;
+    }
+    let str = prompt("Nhập xâu ký tự: ");
+    alert("Có " + differentSymbolsNaive(str) + " ký tự khác nhau.");
+    // let str = prompt("Nhập chuổi: ");
+    // var str1 = str[0];
+    // var dem = 0, x = 1;
+    // for (let i=0; i<str.length; i++) {
+    //     for (let j =0; j<x; j++) {
+    //         if (str[i] == str1[j]) {
+    //             dem++;
+    //         }
+    //     }
+    //     if (dem == 0) {
+    //         str1[x] = str[i];
+    //         x++;
+    //     }
+    // }
+    // console.log("Chuổi là: " + str);
+    // console.log("Có " + x + " phần tử khác nhau là: " + str1);
+</script>
