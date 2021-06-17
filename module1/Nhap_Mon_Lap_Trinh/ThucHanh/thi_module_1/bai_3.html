@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let month;
+    month = parseInt(prompt("Entered in Month: ")); // Nhập vào tháng.
+    do {
+        month = parseInt(prompt("Enter the wrong month, request re-import: "));
+    } while (month < 1 || month > 12);
+    let year = parseInt(prompt("Entered in the year: ")); // Nhập vào năm.
+    function leapYear(year) {
+        if (year % 400 == 0 || ( year % 4 == 0 && year % 100 != 0)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    switch (month) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            alert(month + " / " + year+ " is 31 days a month.");
+            break;
+        case 2:
+            if (leapYear(year)) {
+                alert(month + " / " + year +" is a leap year so there are 29 days");
+            }
+            else {
+                alert(month + " / " + year +" is not a leap year so there are 28 days");
+            }
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            alert(month + " / " + year + " is 30 days a month.")
+    }
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let n;
+    do{
+        n = parseInt(prompt("Enter array length: "));
+    }while (n<0||n>50);
+    let arr = [];
+    for (let i = 0; i<n; i++) {
+        arr[i] = parseInt(prompt("Enter a value arr["+i+"]: "));
+    }
+    let sum = 0, count = 0;
+    for (let i = 0; i<n; i++) {
+        if (arr[i] % 3 == 0) {
+            sum += arr[i];
+            count++;
+        }
+    }
+    alert("the average plus is: " + (sum/count));
+</script>
